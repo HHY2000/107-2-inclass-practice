@@ -23,7 +23,14 @@ a <- 2
 `c`<-32L
 ```
 
+class()可用來得知括號內東西的屬性
+```{r}
+class(a)
+```
 
+```{r}
+class(c)
+```
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)

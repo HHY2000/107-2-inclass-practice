@@ -7,6 +7,27 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+' "用法，兩個物件要逗號分開
+```{R}
+dialogue <- c('小明說："明天不用上課。"',
+               '小花說："真的嗎？"')
+
+cat(dialogue, sep='\n')
+```
+
+T(TRUE)和F(FALSE)會被當成1和0
+```{R}
+aLogical <- c(T,TRUE,F,FALSE,FALSE)
+
+```
+```{r}
+sum(aLogical)
+```
+
+
+
+
+
 ## R Markdown
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.

@@ -35,12 +35,27 @@ class(studentMajors)
 class(studentMajors1)
 ```
 
+r是以整數方式儲存這個資料
+法律系存成1，經濟系存成2
+強制顯現
 ```{r}
-
+typeof(studentMajors)
+levels(studentMajors)
+studentMajors
+as.integer(studentMajors)
 ```
+
+練習
 ```{r}
-
+birthplaces<-factor(
+  c("台北","台北","台中","台中","台北")
+)
+class(birthplaces)
+levels(birthplaces)
+as.integer(birthplaces)
 ```
+
+
 
 
 

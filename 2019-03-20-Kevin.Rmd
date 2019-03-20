@@ -8,7 +8,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ' "用法`。兩個物件要以c()包住，並用逗號分開
-```{R}
+```{r}
 dialogue <- c('小明說："明天不用上課。"',
                '小花說："真的嗎？"')
 
@@ -16,7 +16,7 @@ cat(dialogue, sep='\n')
 ```
 
 T(TRUE)和F(FALSE)會被當成1和0
-```{R}
+```{r}
 aLogical <- c(T,TRUE,F,FALSE,FALSE)
 
 ```
@@ -25,7 +25,7 @@ sum(aLogical)
 ```
 
 factor元素生成方法:用factor()括號起來，沒factor就只是字串
-```{R}
+```{r}
 studentMajors <- factor(
   c("經濟系", "經濟系", "法律系")
 )
@@ -33,6 +33,13 @@ studentMajors1<-
   c("經濟系", "經濟系", "法律系")
 class(studentMajors)
 class(studentMajors1)
+```
+
+```{r}
+
+```
+```{r}
+
 ```
 
 

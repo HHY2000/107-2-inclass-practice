@@ -37,7 +37,8 @@ class(studentMajors1)
 
 r是以整數方式儲存這個資料
 法律系存成1，經濟系存成2
-強制顯現期代表的數字
+螢幕直接顯示的樣子
+強制顯現期代表的數字(as.inteer的數字不能做運算，trueinteger才行)
 ```{r}
 typeof(studentMajors)
 levels(studentMajors)
@@ -55,7 +56,15 @@ levels(birthplaces)
 as.integer(birthplaces)
 ```
 
-
+lubridate的Date Time物件(dtobject)，ymd_hms為年月日_時分秒
+```{r}
+dtObject<-ymd_hms("1970-01-01 00:02:53") 
+dtObjectVector<-ymd_hms(
+  c("1970-01-01 00:02:53",
+    "1980-02-11 11:25:22")
+)
+class(dtObject)
+```
 
 
 

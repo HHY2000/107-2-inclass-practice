@@ -35,8 +35,12 @@ as.integer(twDateTime)
 ```
 
 其他種日期顯示模式
+只用年月日存的數值是幾"天"
 ```{r}
 library(lubridate)
 dtObject<-ymd("2018-09-11")
+typeof(dtObject)
+as.double(dtObject)
+as.double(ymd("2018-09-11"))
 ```
 

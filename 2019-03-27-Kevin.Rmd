@@ -44,7 +44,7 @@ as.double(dtObject)
 as.double(ymd("2018-09-11"))
 ```
 
-
+數值運算
 ```{r}
 a <- c(1, 5, -3)
 aL <- c(1L, 5L, -3L)
@@ -57,4 +57,73 @@ aL+c
 class(aL+bL)
 class(a+bL)
 class(aL-bL)
+twDateTime
+twDateTime+1
+```
+
+
+```{r}
+twDateTime1<-ymd("2018-09-15")
+twDateTime2<-ymd("2018-09-16")
+twDateTime2-twDateTime1
+```
+
+加一年的寫法差異
+```{r}
+startingDate <- ymd("2000-02-17")
+startingDate + years(1)
+startingDate + dyears(1)
+```
+
+數值間的關係
+```{r}
+x <- 5
+y <- 7
+
+x >= y
+x == y
+x <= y
+```
+
+x = y 與 x <- y 相同
+```{r}
+x = y
+as.integer(x)
+```
+
+==(等於)和!=(不等於)亦可用字串
+```{r}
+x3 <- c("小明","小花")
+y3 <- c("小明","小華")
+x3 == y3
+x3 != y3
+```
+
+%in%為屬於的概念
+```{r}
+x4 <- c(1,5,8)
+y4 <- c(5,8)
+
+x4 %in% y4
+y4 %in% x4
+```
+
+NA間無法作邏輯比較
+```{r}
+x2 <- c(1,NA,10)
+y2 <- c(-1,NA,20)
+
+x3 <- c(NA,"小花")
+y3 <- c(NA,"小華")
+
+x2 == y2
+x3 == y3
+x2 + NA
+sum(x2)
+```
+
+用is.na函數得知該物裡面是否有NA
+```{r}
+is.na(x2)
+is.na(x3)
 ```

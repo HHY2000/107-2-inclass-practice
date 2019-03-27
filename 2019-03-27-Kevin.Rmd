@@ -24,7 +24,7 @@ Sys.timezone()
 twDateTime <- ymd_hms("2019-03-18 14:04:00", tz="Asia/Taipei")
 ```
 
-轉成Europe/Lisbon時區
+轉成Europe/Lisbon時區，""理面也可以填時區代碼，如WET，GMT
 ```{r}
 LisbonDateTime <- with_tz(twDateTime,tzone="Europe/Lisbon")
 ```

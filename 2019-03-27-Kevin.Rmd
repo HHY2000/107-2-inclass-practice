@@ -44,3 +44,17 @@ as.double(dtObject)
 as.double(ymd("2018-09-11"))
 ```
 
+
+```{r}
+a <- c(1, 5, -3)
+aL <- c(1L, 5L, -3L)
+bL <- c(-2L, -4L, 8L)
+c<-4
+aL+bL
+a+bL
+aL/bL
+aL+c
+class(aL+bL)
+class(a+bL)
+class(aL-bL)
+```

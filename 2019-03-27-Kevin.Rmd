@@ -2,12 +2,9 @@
 title: "Untitled"
 output: html_document
 ---
-
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
 
 ```{r}
 library(lubridate)
@@ -29,4 +26,17 @@ twDateTime <- ymd_hms("2019-03-18 14:04:00", tz="Asia/Taipei")
 LisbonDateTime <- with_tz(twDateTime,tzone="Europe/Lisbon")
 ```
 
+typeof得知電腦存成什麼樣的數值，as.強迫他顯示該務實際數值
+```{r}
+typeof(twDateTime)
+as.double(twDateTime)
+as.double(LisbonDateTime)
+as.integer(twDateTime)
+```
+
+其他種日期顯示模式
+```{r}
+library(lubridate)
+dtObject<-ymd("2018-09-11")
+```
 

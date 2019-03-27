@@ -1,0 +1,32 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library(lubridate)
+dtObject<-ymd_hms("1970-01-01 00:02:53") 
+```
+
+顯示時區
+```{r}
+Sys.timezone()
+```
+
+改成台灣時區
+```{r}
+twDateTime <- ymd_hms("2019-03-18 14:04:00", tz="Asia/Taipei")
+```
+
+轉成Europe/Lisbon時區
+```{r}
+LisbonDateTime <- with_tz(twDateTime,tzone="Europe/Lisbon")
+```
+
+

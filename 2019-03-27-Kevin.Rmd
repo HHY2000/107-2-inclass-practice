@@ -127,3 +127,8 @@ sum(x2)
 is.na(x2)
 is.na(x3)
 ```
+
+na.rm指只移除(remove)NA項
+```{r}
+sum(x2 , na.rm = T)
+```

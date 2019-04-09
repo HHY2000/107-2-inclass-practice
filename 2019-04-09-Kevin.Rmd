@@ -113,6 +113,7 @@ class(date)
 ```
 1980-08-01之後的資料有多少筆
 (date要跟同屬性(Date)的比大小)
+(老師將資料重新命名為isAfter19800801)
 ```{r}
 isAfter19080801 <-
   date >= ymd("1980-08-01")
@@ -124,7 +125,20 @@ sum(isAfter19080801)
 幣別為歐圓的有多少筆
 ```{r}
 head(currency == "歐元USD/EUR")
-sum(currency == "歐元USD/EUR")
+isEuro <- currency == "歐元USD/EUR"
+sum(isEuro)
+```
+exchange有多少筆NA
+```{r}
+isExchangeNA <-
+  is.na(exchangeRate)
+sum(isExchangeNA)
+```
+排除NA後，幣別為“歐元USD/EUR”的資料有多少筆
+```{r}
+isNotNA <- !is.na(exchangeRate)
+isEuro <- currency == "歐元USD/EUR"
+sum(isNotNA & isEuro)
 ```
 
 

@@ -121,6 +121,11 @@ head(as.integer(date))
 as.integer(ymd("1980-08-01"))
 sum(isAfter19080801)
 ```
+幣別為歐圓的有多少筆
+```{r}
+head(currency == "歐元USD/EUR")
+sum(currency == "歐元USD/EUR")
+```
 
 
 

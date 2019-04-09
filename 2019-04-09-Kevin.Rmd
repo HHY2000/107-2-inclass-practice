@@ -35,6 +35,21 @@ head可用來觀測物件的前6筆值
 head(currency)
 ```
 
+資料一進來並沒有被當成是factor
+```{r}
+class(currency)
+```
+
+更正成factor
+```{r}
+currency <- as.factor(currency)
+class(currency)
+```
+
+用levels看類別(只有factor物件能看種類，類別)
+```{r}
+levels(currency)
+```
 
 ## R Markdown
 

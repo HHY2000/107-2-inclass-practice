@@ -1,0 +1,47 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+安裝package
+```{r}
+install.packages(stringr)
+```
+```{r}
+library(stringr)
+```
+
+str_subset,str_detect用法
+```{r}
+course <- c("個體經濟學","投資學","總體經濟學")
+course
+str_subset(course,"經濟學")
+str_detect(course,"經濟學")
+```
+
+str_sub用法
+```{r}
+studentID<-c(
+  '410177115','410176080','410174233','410177011','410182045','410176014')
+str_sub(studentID, 5,6)
+str_sub(studentID, 2,4)
+```
+
+str_c用法(合併)
+```{r}
+month <- c("3","4","2")
+day <- c("11","5","7")
+char1 <- c("月","月","月")
+char2 <- c("日","日","日")
+month
+char1
+day 
+char2
+str_c(month,char1,day,char2)
+str_c(month,"月",day,"號")
+str_c(month,day, sep="/")
+```

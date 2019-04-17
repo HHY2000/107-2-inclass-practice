@@ -65,8 +65,10 @@ studentRecord[["學年平均成績"]][[3]]
 
 [.]取一群元素
 ```{r}
+plasticContainer
 plasticContainer[c("greenBox","redBox")] 
 plasticContainer[c(1,2)]
+plasticContainer[c(T,T,F)]
 ```
 
 []會保有a母層的元素(在例題中為塑膠箱)，[[]]則不會

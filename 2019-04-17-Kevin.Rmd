@@ -16,7 +16,8 @@ plasticContainer <- list(
   blueBox=c(TRUE,FALSE,TRUE,TRUE)    # location 3
 )
 ```
-[[.]]
+
+[[.]]取一個元素
 ```{r}
 plasticContainer
 
@@ -62,13 +63,25 @@ studentRecord[["姓名"]]
 studentRecord[["學年平均成績"]][[3]]
 ```
 
-[.]
+[.]取一群元素
 ```{r}
 plasticContainer[c("greenBox","redBox")] 
 plasticContainer[c(1,2)]
 ```
 
+[]會保有a母層的元素(在例題中為塑膠箱)，[[]]則不會
+```{r}
+plasticContainer
 
+extract1 <- plasticContainer[c("greenBox")]
+extract1
+extract2 <- plasticContainer[[c("greenBox")]]
+extract2
+
+extract1[[1]]
+extract1[[1]][[1]]
+extract2[[1]]
+```
 
 
 

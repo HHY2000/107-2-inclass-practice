@@ -85,6 +85,13 @@ extract1[[1]][[1]]
 extract2[[1]]
 ```
 
+$用法
+```{r}
+plasticContainer
+
+plasticContainer$greenBox
+plasticContainer[["greenBox"]]
+```
 
 
 

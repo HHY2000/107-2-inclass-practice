@@ -94,8 +94,48 @@ plasticContainer[["greenBox"]]
 ```
 
 
+```{r}
+your_github_username <- "HHY2000"
+your_practice_reponame <- "107-2-inclass-practice"
+library(httr)
+library(stringr)
+str_replace_all(
+  "https://api.github.com/repos/:owner/:repo/commits",
+  c(
+    ":owner"=your_github_username,
+    ":repo"=your_practice_reponame
+    )
+  ) -> commitCheckStatement
+commitCheck <- content(GET(commitCheckStatement))
+```
 
+去comitCheck取一時間資料
+```{r}
+commitCheck[[10]][["commit"]][["committer"]][["date"]]
+```
+換成電腦看得懂的
+```{r}
+commitDate <- commitCheck[[10]][["commit"]][["committer"]][["date"]]
+commitDate <- ymd_hms
+commitDate)
+with.tz(commitDate,tz="Asia/Taipei")
 
+```
+
+```{r}
+library(readr)
+filmVotingData <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/podcastcompetition3.csv")
+str_replace(filmVotingData$請選擇你最喜歡的影片二部,", by"," by") -> favoriteTwo
+birthday <- filmVotingData$`出生西元年月日（驗證本人用）`
+timeStamp <- filmVotingData$Timestamp
+```
+```{r}
+birthday
+logiCorrect <- str_length(birthday)==8
+logiCorrect
+favoriteTwo[logiCorrect] -> validFavoriteTwo
+validFavoriteTwo
+```
 
 
 

@@ -118,7 +118,7 @@ commitCheck[[10]][["commit"]][["committer"]][["date"]]
 commitDate <- commitCheck[[10]][["commit"]][["committer"]][["date"]]
 commitDate <- ymd_hms
 commitDate)
-with.tz(commitDate,tz="Asia/Taipei")
+with_tz(commitDate,tz="Asia/Taipei")
 
 ```
 

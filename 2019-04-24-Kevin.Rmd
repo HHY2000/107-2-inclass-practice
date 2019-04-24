@@ -35,9 +35,11 @@ StuDF[[2]][[3]]
 
 letters(LETTERS)為一內定物件，資料為a~z(A~Z)
 將群組租料抓個個資料時用[ : ]
+可用[c( , ),c( , )]取第幾列第幾行
 ```{r}
 chosenletters <- letters[1:16]
 matobj2 <- matrix(chosenletters,4,4)
 matobj2
+matobj2[c(1,4),c(2,3)]
 ```
 

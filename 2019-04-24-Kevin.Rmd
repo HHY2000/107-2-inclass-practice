@@ -7,15 +7,28 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+矩陣matrix([[2]]直接取第二個)
+(matrix長相是騙人的，可以直接用原本的取法取出你要的東西)
+(btw，True和false的運用來取資料還挺好用的，學著點)
 ```{r}
-m2<-matrix(c("a","b","c","d"),2,2)
-class(m2)
-typeof(m2)
-a<-m2[[1]]
-c<-m2[[3]]
-bd<-m2[2,]
-a
-c
-bd
+MAT2 <- matrix(c("a","b","c","d"),2,2)
+MAT2
+class(MAT2)
+typeof(MAT2)
+MAT2[[2]]
+MAT2[c(T,F,F,T)]
+```
+
+data.frame的形式(R看的東西是把它當list看)
+(data.frame中character的項會被自動轉成factor)
+```{r}
+StuDF <- data.frame(StuID=c(1,2,3,4,5), ##欄位名稱=欄位值
+                  name=c("小明","大雄","胖虎","小新","大白"),
+                  score=c(80,60,90,70,50))
+StuDF 
+```
+```{r}
+#取胖虎
+StuDF[[2]][[3]]
 ```
 

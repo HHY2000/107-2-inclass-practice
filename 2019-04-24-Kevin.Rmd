@@ -20,7 +20,8 @@ MAT2[c(T,F,F,T)]
 ```
 
 data.frame的形式(R看的東西是把它當list看)
-(data.frame中character的項會被自動轉成factor)
+(data.frame中character的項會被自動轉成factor，若不想，在最後面打stringsAsFactor == False)
+也可用as.data.frame()把list資料轉成data.frame，一樣，( ,stringsAsFactor == False)可避免character被轉成factor
 ```{r}
 StuDF <- data.frame(StuID=c(1,2,3,4,5), ##欄位名稱=欄位值
                   name=c("小明","大雄","胖虎","小新","大白"),
@@ -30,5 +31,13 @@ StuDF
 ```{r}
 #取胖虎
 StuDF[[2]][[3]]
+```
+
+letters(LETTERS)為一內定物件，資料為a~z(A~Z)
+將群組租料抓個個資料時用[ : ]
+```{r}
+chosenletters <- letters[1:16]
+matobj2 <- matrix(chosenletters,4,4)
+matobj2
 ```
 

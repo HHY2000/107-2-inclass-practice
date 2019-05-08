@@ -1,0 +1,33 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+randomGrades <- sample(40:80,15,replace = T)
+randomCredits <- sample(0:3,15,replace=T)
+data3 <- list(
+  成績=randomGrades,
+  學分數=randomCredits
+)
+```
+
+```{r}
+data3
+passLogic <- data3$成績>=60
+passLogic2 <- passLogic == TRUE
+passLogic2
+a <- data3$成績[passLogic2]
+a
+passData <- list(
+  成績 = data3$成績[passLogic == T],
+  學分數 = data3$學分數[passLogic == TRUE]
+)
+passData
+```
+
+

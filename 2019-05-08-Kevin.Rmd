@@ -116,3 +116,19 @@ sampledTranscriptData$學系 <- str_replace(sampledTranscriptData$系級,"[:digi
 sampledTranscriptData$學系
 ```
 
+Ans74
+```{r}
+(sampledTranscriptData$系碼!="73" & 
+   sampledTranscriptData$學系=="經濟學系") -> logiCheck
+
+sampledTranscriptData$學號[logiCheck] 
+
+unique(sampledTranscriptData$學號[logiCheck]) -> changeMajorStudent
+
+changeMajorStudent
+list(
+  學系=,
+  系碼=
+)
+```
+

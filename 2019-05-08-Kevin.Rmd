@@ -97,3 +97,22 @@ tail(sampledTranscriptData$系碼) # or head()
 #sampledTranscriptData
 ```
 
+Ans73
+```{r}
+sampledTranscriptData$學系 <- str_replace(sampledTranscriptData$系級,"1","")
+sampledTranscriptData$學系 <- str_replace(sampledTranscriptData$學系,"2","")
+sampledTranscriptData$學系 <- str_replace(sampledTranscriptData$學系,"3","")
+sampledTranscriptData$學系 <- str_replace(sampledTranscriptData$學系,"4","")
+
+head(sampledTranscriptData$系級)
+head(sampledTranscriptData$學系)
+## ----ans73---------------------------------------------------------------
+sampledTranscriptData$學系 <- str_replace(sampledTranscriptData$系級,"[1234]","")
+
+sampledTranscriptData$學系
+## ----ans73---------------------------------------------------------------
+sampledTranscriptData$學系 <- str_replace(sampledTranscriptData$系級,"[:digit:]","")
+
+sampledTranscriptData$學系
+```
+

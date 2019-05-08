@@ -86,3 +86,14 @@ sum(logicChosenSubjectAndFail)/sum(logicChosenSubject) -> failRate
 failRate
 ```
 
+Ans72
+```{r}
+sampledTranscriptData$學屆 <- 
+  str_sub(sampledTranscriptData$學號,2,4)
+sampledTranscriptData$系碼 <- 
+  str_sub(sampledTranscriptData$學號,5,6)
+tail(sampledTranscriptData$學號) # or head()
+tail(sampledTranscriptData$系碼) # or head()
+#sampledTranscriptData
+```
+

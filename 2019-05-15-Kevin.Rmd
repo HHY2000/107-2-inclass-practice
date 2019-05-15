@@ -73,3 +73,24 @@ transcriptDataFinal <- read_csv("https://raw.githubusercontent.com/tpemartin/git
 transcriptDataFinal[transcriptDataFinal$學號 == "92aS67fee",]
 ```
 
+function
+```{r}
+num <- function(x,.alpha){
+  num1 <- x+.alpha # 程序產生output值
+  return(num1) # 傳回output值
+}
+num(2,4)
+```
+```{r}
+supplyFunction <- function(a,b,P){
+  Qs <- a+b*P
+  return(Qs)
+}
+demandFunction <- function(a,b,P){
+  Qd <- a-b*P
+  return(Qd)
+}
+supplyFunction(1,2,3)
+demandFunction(1,2,3)
+```
+

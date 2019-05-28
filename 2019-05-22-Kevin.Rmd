@@ -62,11 +62,34 @@ ymd_hms_tzChange <- function(input,fromTzone,toTzone){
 ymd_hms_tzChange("1973-02-21 12:05:22","America/New_York","Asia/Taipei")
 ```
 
-民國年月
+預設
 ```{r}
-library(stringr)
-sample(99:103,15,replace = T)-> yy
-sample(1:12,15,replace=T)-> mm
-str_c("民國",str_pad(yy,3,"left","0"),"年",mm,"月") -> twDates
+utility_cobb_douglass2 <- function(x,y,.alpha=0.5,.beta=0.5){
+  utilValue <- x^.alpha*y^.beta
+  return(utilValue)
+}
+```
+```{r}
+utility_cobb_douglass2(1,2) # 使用預設值
+utility_cobb_douglass2(1,2,0.5,0.8) # 自定參數值
 ```
 
+沒有預設值
+```{r}
+date_convert_twYM <- function(twDates){
+  #twDates
+  yyyy<-as.integer(str_extract(twDates,"(?<=(民國))[:digit:]+"))+1911
+  mm<-str_extract(twDates,"[:digit:]+(?=月)")
+  yyyymmdd <- ymd(str_c(yyyy,mm,"01",sep="-"))
+  return(yyyymmdd)
+}
+```
+有預設值
+```{r}
+date_convert_twYM <- function(twDates,dd="01"){
+  yyyy<-as.integer(str_extract(twDates,"(?<=(民國))[:digit:]+"))+1911
+  mm<-str_extract(twDates,"[:digit:]+(?=月)")
+  yyyymmdd <- ymd(str_c(yyyy,mm,dd,sep="-"))
+  yyyymmdd
+}
+```

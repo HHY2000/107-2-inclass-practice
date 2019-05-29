@@ -28,8 +28,21 @@ now2() <- xx
 xx
 ```
 
-
+輸出多個函數要用list
 ```{r}
-
+gpa_fun2 <- function(studentID){
+  transcriptDataFinal$學號==studentID -> logiChosenStudent
+  
+  subSample <- transcriptDataFinal[logiChosenStudent,]
+  
+  sum(subSample$學期成績*subSample$學分數)/
+    sum(subSample$學分數) -> GPA
+  return(
+    list(
+      平均成績=GPA,
+      成績單=subSample
+      )
+  )
+}
 ```
 

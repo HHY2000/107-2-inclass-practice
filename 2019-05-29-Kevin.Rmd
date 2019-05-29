@@ -47,6 +47,7 @@ demand_supply_fun(1,2,3,4,5)
 ```
 
 條件執行
+print和message皆為訊息顯示，但message是用在出現錯誤時的訊息顯示
 ```{r}
 supply_fun1 <- function(P,a,b){
   Qs <- a+b*P

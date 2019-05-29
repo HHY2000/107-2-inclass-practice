@@ -60,4 +60,22 @@ supply_fun1 <- function(P,a,b){
 supply_fun1(P=-1,0,1)
 supply_fun1(P=2,0,1)
 ```
+```{r}
+gpa_fun <- function(studentID){
+  if(studentID %in% transcriptDataFinal$學號){
+  transcriptDataFinal$學號==studentID -> logiChosenStudent
+  subSample <- transcriptDataFinal[logiChosenStudent,]
+  sum(subSample$學期成績*subSample$學分數)/
+    sum(subSample$學分數) -> GPA
+  return(GPA)
+  }
+  else
+    {
+      message("查無此學號")
+    }
+}
+
+gpa_fun("92aS67fee") # 顯示82.85276
+gpa_fun("aa829838s") # 查無此學號
+```
 

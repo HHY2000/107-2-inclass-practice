@@ -79,3 +79,45 @@ gpa_fun("92aS67fee") # 顯示82.85276
 gpa_fun("aa829838s") # 查無此學號
 ```
 
+連續if，else
+```{r}
+supply_fun4 <- function(P,a,b){
+  Qs <- a+b*P
+  if(P < 0) {
+    message("P不能為負值") # 在螢幕出現的「錯誤」提示，沒有輸出任何值
+  } else if(P < -a/b) {
+    message("P必需大於等於",-a/b,"(即-a/b值)")
+  } else {
+    return(Qs)
+  }
+}
+supply_fun4(P=-1,-3,1)
+supply_fun4(P=2,-3,1)
+supply_fun4(P=3,-3,1)
+```
+```{r}
+fizzbuzz_fun <- function(x){
+  if(x %% 3 == 1){
+    print("Fizz")
+    }
+  else if(x %% 3 == 2){
+    print("Buzz")
+  }
+  else if(x %% 3 == 0){
+    print("FizzBuzz")
+  }
+  else{
+    print(x)
+  }
+}
+```
+
+all，any
+```{r}
+a <- c(1,3,5)
+a>2 # 此邏輯條件產生三個值
+if(a>2) {
+  print("a大於2")
+}
+```
+

@@ -72,11 +72,14 @@ saveCommitAuthor
 存下來每個commit的author==commiter的結果
 
 0. saving container
+```{r}
 saveEveryThing <- vector("list",length(commitHistory))
 saveSameLogi <- vector("logical",length(commitHistory))
-1. sequence source
-commitHistory
+```
+1. sequence sourcceommitHistory
+```
 2. body
+```{r}
 i <- 1
 
 author_i <- commitHistory[[i]]$commit$author$name
@@ -89,11 +92,14 @@ list(
   committer=committer_i,
   commitDate=commitDate_i
 ) -> saveEveryThing[[i]]
+```
 檢查一下
-
+```{r}
 saveEveryThing
 saveSameLogi
+```
 3. for loop
+```{r}
 saveEveryThing <- vector("list",length(commitHistory))
 saveSameLogi <- vector("logical",length(commitHistory))
 for(i in seq_along(commitHistory)){
@@ -109,7 +115,14 @@ for(i in seq_along(commitHistory)){
     commitDate=commitDate_i
   ) -> saveEveryThing[[i]]  
 }
+```
+```{r}
 saveEveryThing
+```
+```{r}
 print(saveSameLogi)
+```
+```{r}
 saveEveryThing[saveSameLogi] -> saveValidCommitDate
 saveValidCommitDate
+```

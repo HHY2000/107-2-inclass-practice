@@ -76,7 +76,9 @@ saveCommitAuthor
 saveEveryThing <- vector("list",length(commitHistory))
 saveSameLogi <- vector("logical",length(commitHistory))
 ```
-1. sequence sourcceommitHistory
+1. sequence source
+```{r}
+commitHistory
 ```
 2. body
 ```{r}
